@@ -1,7 +1,5 @@
 import React from 'react';
 
-const Header = () => <p>Welcome to Everything Beer!</p>
-
-const Btn = () => <button>Login</button>
+const Header = () => <h1>Welcome to Everything Beer!</h1>
 
 export default Header
