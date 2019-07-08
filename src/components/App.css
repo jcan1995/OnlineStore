@@ -1,3 +1,41 @@
+/* Import google fonts for website */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans&display=swap');
+
+/* set up rules (SASS) for whole document */
+:root{
+  /* color scheme set up */
+  --primaryColor:#5fb7ea;
+  --primaryRGBA: rgba(0,0,0,0.3);
+  --mainGray: #fafafa;
+  --darkGray: #5f5f5f;
+  --mainWhite: #fff;
+  --mainBlack: #222;
+
+  /* Effects set up */
+  --mainTransition:all 0.3s ease-in-out; /* For img hover */
+  --mainSpacing: 0.3rem; /* For letter spacing */
+
+}
+/* ----------------- TEXT CLASSES  ----------- */
+.text-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  letter-spacing: var(--mainSpacing);
+  text-transform: capitalize;
+}
+
+.text-main {
+  color:var(--primaryColor);
+}
+
+/* ------------------ BODY START ------------ */
+body{
+  /* Include the fonts on the body */
+  font-family: "Open Sans", sans-serif !important;
+  background: var(--mainGray) !important;
+}
 .example {
   color: blue;
 }
+
+
