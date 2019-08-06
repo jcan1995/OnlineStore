@@ -3,29 +3,27 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { FaHome } from 'react-icons/fa';
 import Header from './Header';
-import styled from "styled-components";
+
+/* imports from our pages */
+import About from '../pages/AboutPage';
+
 
 class App extends Component {
+
   render() {
+
+    let isAuth = true; /* <---- pass in the user authentication token here */
+    let userName = "John Doe"; /* <--- we need to pass in the name of the user */
+
     return (
+      
       <div>
-        <Header/>
-        <FaHome/>
-        <Button large>click me!</Button>
-      </div>
+        <Header auth={isAuth} name={userName}/>
+      </div> 
+      
     );
   }
 
 }
 
-
-const color = '#f15025';
-
-const Button = styled.button`
-  background: ${color};
-  border-radius: 3px;
-  border: none;
-  color: white;
-  font-size: ${props => (props.large?"3rem":"1rem")};
-`
 export default App;
