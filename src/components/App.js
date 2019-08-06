@@ -6,6 +6,13 @@ import Header from './Header';
 
 /* imports from our pages */
 import About from '../pages/AboutPage';
+import Cart from '../pages/CartPage';
+import Contact from '../pages/ContactPage';
+import Default from '../pages/Default';
+import Home from '../pages/HomePage';
+import Products from '../pages/Products';
+import SingleProductPage from '../pages/SingleProductPage';
+
 
 
 class App extends Component {
@@ -17,8 +24,10 @@ class App extends Component {
 
     return (
       
-      <div>
+      <div class="app">
         <Header auth={isAuth} name={userName}/>
+
+        <Home auth={isAuth} name={userName}/>
       </div> 
       
     );
