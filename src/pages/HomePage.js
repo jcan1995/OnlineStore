@@ -1,8 +1,8 @@
 import React from "react";
 
 const HomePage = (prop) => {
-
     const { name, auth} = prop; // ES6 Destructuring Assignment
+    
     /* Conditional Render for un/authenticated users */
     if(auth){
         return <DisplayAuth name={ name }/>
@@ -10,7 +10,6 @@ const HomePage = (prop) => {
     else{
         return <DisplayUnauth/>
     }
-
 }
 
 /* This will display the home page for unauthenticated users:
@@ -30,7 +29,6 @@ const DisplayUnauth = () => {
         - User should be prompted to invite friends to recieve discount
 */
 const DisplayAuth = (data) => {
-
     const { name } = data; // ES6 Desctructuring assignments
     return(
         <div class="body">

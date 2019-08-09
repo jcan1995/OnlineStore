@@ -1,10 +1,8 @@
 import React from 'react';
 import {FaCartArrowDown} from 'react-icons/fa';
-
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const Header = (status) => {
-
     const { auth, name } = status;
     /* Will work according to user authentication status */
     if(auth){
@@ -13,9 +11,7 @@ const Header = (status) => {
     else{
         return <DisplayUnauth/>
     }
-
 }
-
 /* Unauthenticated display for the header : 
     Requirements:
         Title
@@ -45,9 +41,7 @@ const DisplayUnauth = () => {
                 </div>
             </ul>
         </nav>
-
     )
-
 }
 
 /* Authenticated display for header: 
@@ -76,7 +70,6 @@ const DisplayAuth = (user) => {
                 </div>
             </ul>
         </nav>
-
     )
 }
 

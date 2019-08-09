@@ -1,7 +1,6 @@
 /* Import google fonts for website */
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans&display=swap');
 
-
 /* set up rules (SASS) for whole document */
 :root{
   /* color scheme set up */
@@ -36,12 +35,9 @@
 }
 
 /* -----------------NAVIGATION BARS -------------*/
-
 .navigation {
   list-style: none;
-  
   margin: 0;
-
   background: var(--primaryColor);
 
   display: -webkit-box;
@@ -67,7 +63,6 @@
   padding: .6em;
 }
 
-
 .navigation a{
   text-decoration: none;
   font-size: 1.1em;
@@ -82,7 +77,6 @@
   color: darken(var(--mainBlack));
   text-decoration: none;
 }
-
 
 /* ------------------ BODY START ------------ */
 body{
