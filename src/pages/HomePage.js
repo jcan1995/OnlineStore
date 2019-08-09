@@ -2,11 +2,10 @@ import React from "react";
 
 const HomePage = (prop) => {
 
-    console.log(prop); // to see what we are recieving form the prop
-
+    const { name, auth} = prop; // ES6 Destructuring Assignment
     /* Conditional Render for un/authenticated users */
-    if(prop.auth){
-        return <DisplayAuth name={prop.name}/>
+    if(auth){
+        return <DisplayAuth name={ name }/>
     }
     else{
         return <DisplayUnauth/>
@@ -31,10 +30,11 @@ const DisplayUnauth = () => {
         - User should be prompted to invite friends to recieve discount
 */
 const DisplayAuth = (data) => {
-    console.log(data.name); // to check what we are receiving from data.name
+
+    const { name } = data; // ES6 Desctructuring assignments
     return(
         <div class="body">
-            <h1>Hello, {data.name}</h1>
+            <h1>Hello, { name }</h1>
             <p>Send your friends an invite to join and we will give you 15% Off when they sign up!</p>
         </div>
     )
