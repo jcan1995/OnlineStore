@@ -3,9 +3,10 @@ import {FaCartArrowDown} from 'react-icons/fa';
 
 const Header = (status) => {
 
+    const { auth, name} = status;
     /* Will work according to user authentication status */
-    if(status.auth){
-        return <DisplayAuth userName={status.name}/>
+    if(auth){
+        return <DisplayAuth userName={ name }/>
     }
     else{
         return <DisplayUnauth/>
