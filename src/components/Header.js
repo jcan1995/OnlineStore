@@ -1,9 +1,11 @@
 import React from 'react';
 import {FaCartArrowDown} from 'react-icons/fa';
 
+import "bootstrap/dist/css/bootstrap.min.css";
+
 const Header = (status) => {
 
-    const { auth, name} = status;
+    const { auth, name } = status;
     /* Will work according to user authentication status */
     if(auth){
         return <DisplayAuth userName={ name }/>
