@@ -82,6 +82,8 @@
   color: darken(var(--mainBlack));
   text-decoration: none;
 }
+
+
 /* ------------------ BODY START ------------ */
 body{
   /* Include the fonts on the body */
