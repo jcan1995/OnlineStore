@@ -1,3 +1,99 @@
+/* Import google fonts for website */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans&display=swap');
+
+
+/* set up rules (SASS) for whole document */
+:root{
+  /* color scheme set up */
+  --primaryColor:#d9534f;
+  --primaryRGBA: rgba(0,0,0,0.3);
+  --mainGray: #fafafa;
+  --darkGray: #5f5f5f;
+  --mainWhite: #fff;
+  --mainBlack: #222;
+
+  /* Effects set up */
+  --mainTransition:all 0.3s ease-in-out; /* For img hover */
+  --mainSpacing: 0.3rem; /* For letter spacing */
+
+}
+/* ----------------- TEXT CLASSES  ----------- */
+.text-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  letter-spacing: var(--mainSpacing);
+  text-transform: capitalize;
+}
+
+.text-main {
+  color:var(--primaryColor);
+}
+
+.icon {
+  font-size: 2em;
+  padding:0em;
+  float: top;
+}
+
+/* -----------------NAVIGATION BARS -------------*/
+
+.navigation {
+  list-style: none;
+  
+  margin: 0;
+
+  background: var(--primaryColor);
+
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+  flex-flow: row wrap;
+  flex-wrap: wrap;
+
+  justify-content: flex-end;
+}
+
+.nav-left, .nav-right {flex-basis: 50%;}
+
+.nav-right{ text-align: right; }
+
+.navigation h3 {
+  color: var(--mainWhite);
+  text-align: left;
+  display: block;
+  padding: .6em;
+}
+
+
+.navigation a{
+  text-decoration: none;
+  font-size: 1.1em;
+  float: right;
+  box-align: left;
+  display: block;
+  padding: 1.25em 1.5em;
+  color:white;
+}
+
+.navigation a:hover {
+  color: darken(var(--mainBlack));
+  text-decoration: none;
+}
+
+
+/* ------------------ BODY START ------------ */
+body{
+  /* Include the fonts on the body */
+  font-family: "Open Sans", sans-serif !important;
+  background: var(--mainGray) !important;
+}
 .example {
   color: blue;
 }
+
+
+
+
