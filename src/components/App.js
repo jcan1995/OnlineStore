@@ -1,11 +1,16 @@
 import React, { Component } from 'react';
 import './App.css';
-import { Route, BrowserRouter } from 'react-router-dom';
+import { Route,Switch, BrowserRouter } from 'react-router-dom';
 import Header from './Header';
 
 /* imports from our pages */
 import Home from '../pages/HomePage';
 import ContactPage from '../pages/ContactPage';
+import Notfound from '../pages/NotFound';
+import Sidecart from './Sidecart';
+import Footer from './Footer';
+import Sidebar from './Sidebar';
+
 
 class App extends Component {
 
@@ -23,15 +28,19 @@ class App extends Component {
 
     return (
       <div class="app">
+        <Header auth={ isAuth } name={ userName }/>
+        <Sidebar/>
+        <Sidecart/>
         <BrowserRouter>
-          <div>
-              <Header auth={ isAuth } name={ userName }/>
+            <Switch>
               <Route exact path="/"
                     render={(props) => <Home {...props} auth={isAuth} name={userName}/>}
               />
               <Route path="/contact" component={ ContactPage }/> 
-          </div>
+              <Route component={ Notfound } />
+            </Switch>
         </BrowserRouter>
+        <Footer/>
       </div>
     );
   }

@@ -2,8 +2,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/App';
-
+import { ProductProvider } from './context'
 ReactDOM.render(
-  <App />,
+  <ProductProvider>
+    <App />
+  </ProductProvider>,
   document.getElementById('app')
 );
