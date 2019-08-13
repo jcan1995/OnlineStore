@@ -13,13 +13,11 @@ class App extends Component {
     let userName = "John Doe"; /* <--- we need to pass in the name of the user */
 
     return (
-      
       <div class="app">
         <Header auth={isAuth} name={userName}/>
 
         <Home auth={isAuth} name={userName}/>
-      </div> 
-      
+      </div>
     );
   }
 
