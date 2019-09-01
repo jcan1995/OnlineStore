@@ -11,35 +11,19 @@ import Sidecart from './Sidecart';
 import Footer from './Footer';
 import Sidebar from './Sidebar';
 
-
 class App extends Component {
 
-  state = {auth: true}
-
-  componentDidMount() {
-    let res = true;
-    this.setState({auth: res});
-  }
-
   render() {
-
-    let isAuth = this.state.auth; /* <---- pass in the user authentication token here */
-    let userName = "John Doe"; /* <--- we need to pass in the name of the user */
-
     return (
       <div class="app">
-        <Header auth={ isAuth } name={ userName }/>
+        <Header/>
         <Sidebar/>
         <Sidecart/>
-        <BrowserRouter>
-            <Switch>
-              <Route exact path="/"
-                    render={(props) => <Home {...props} auth={isAuth} name={userName}/>}
-              />
-              <Route path="/contact" component={ ContactPage }/> 
-              <Route component={ Notfound } />
-            </Switch>
-        </BrowserRouter>
+        <Switch>
+          <Route exact path="/" component={Home}/>
+          <Route path="/contact" component={ ContactPage }/> 
+          <Route component={ Notfound } />
+        </Switch>
         <Footer/>
       </div>
     );

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { linkDataAuth, linkDataUnAuth } from './linkData';
 
 /* Contex API */
 const ProductContext = React.createContext();
@@ -8,16 +9,21 @@ class ProductProvider extends Component {
         sidebarOpen: false,
         cartOpen:false,
         cartItems: 0,
-        isAuth: false, 
-        name: "Rob Zombie",
+        isAuth: true, 
+        userName: "John Doe",
+        linksDataAuth: linkDataAuth,
+        linksDataUnAuth: linkDataUnAuth,
+        cart: [],
     };
 
     handleSidebar = () => {
-        this.setState({ sidebarOpen: !this.state.sidebarOpen });
+        this.setState({ sidebarOpen: 
+            !this.state.sidebarOpen });
     }
     // Handle for the cart slider
     handleCart = () => {
-        this.setState({ cartOpen: !this.state.sidebarOpen });
+        this.setState({ cartOpen: 
+            !this.state.sidebarOpen });
     }
 
     // close cart
@@ -35,15 +41,11 @@ class ProductProvider extends Component {
         return(
             <ProductContext.Provider 
             value={{
-                sidebarOpen: this.state.sidebarOpen,
-                cartOpen: this.state.cartOpen,
-                cartItems: this.state.cartItems,
-                isAuth: this.state.isAuth, 
-                name: this.state.name,
+                ...this.state,
                 handleSidebar: this.handleSidebar,
                 handleCart: this.handleCart,
                 closeCart: this.closeCart,
-                openCart: this.openCart
+                openCart: this.openCart,
             }}>
                 { this.props.children }
             </ProductContext.Provider>
