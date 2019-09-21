@@ -10,7 +10,7 @@ class ProductProvider extends Component {
         cartOpen:false,
         cartItems: 0,
         isAuth: true, 
-        userName: "John Doe",
+        userName: "Josh Cantero",
         linksDataAuth: linkDataAuth,
         linksDataUnAuth: linkDataUnAuth,
         cart: [],

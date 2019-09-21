@@ -15,10 +15,8 @@ const Header = () => {
                             <FaBars className="nav-icon" onClick={ handleSidebar}/>
                             <h2>NotBevmo.com</h2>
                             <div class="nav-cart">
-                                <FaCartPlus className="nav-icon" onClick={ handleCart }>  
-                                    
-                                </FaCartPlus>
-                                <div className="cart-items">{ cartItems }</div>   
+                                <FaCartPlus className="nav-icon" onClick={ handleCart } />  
+                                <div className="cart-items">{ cartItems }</div>  
                             </div>
                         </div>          
                     </NavWrapper>
@@ -29,7 +27,6 @@ const Header = () => {
 }
 
 /* ------------- Styled Components ------------ */
-
 const NavWrapper = styled.nav`
     position: -webkit-sticky;
     position: sticky;

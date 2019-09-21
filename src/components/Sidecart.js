@@ -6,9 +6,9 @@ export default function Sidecart(){
     return(
         <ProductConsumer>
             {value => {
-                const { openCart, closeCart, cart} = value;
+                const { cartOpen, closeCart, cart} = value;
                 return (
-                <CartWrapper show={ openCart } onClick={ closeCart }>
+                <CartWrapper show={ cartOpen } onClick={ closeCart }>
                         <p>cart items</p>
                 </CartWrapper>
                 );
@@ -27,9 +27,10 @@ const CartWrapper = styled.nav`
     background: var(--mainGray);
     z-index: 1;
     border-left: 2px solid var(--primaryColor);
-    transform: ${props => (props.show ? "translateX(0)": 
-    "translateX(100%)")};
+    transform: ${props => props.show ? "translateX(0)": 
+    "translateX(100%)"};
     transition: var(--mainTransition);
+
     @media (min-width: 576px){
         width: 20rem;
     }
