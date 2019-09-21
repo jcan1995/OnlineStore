@@ -1,15 +1,9 @@
-import React from "react";
+import React, { Component } from 'react';
 
-export default function ContactPage(){
-    return(
-        <div>
-            <h1>hello from Contact Page</h1>
-        </div>
-
-    );
-
-
+export default class ContactPage extends Component {
+    render() {
+        return (
+            <div>This is the contact page</div>
+        )
+    }
 }
-
-
-

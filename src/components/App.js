@@ -1,28 +1,33 @@
 import React, { Component } from 'react';
 import './App.css';
+import { Route,Switch, BrowserRouter } from 'react-router-dom';
 import Header from './Header';
 
 /* imports from our pages */
 import Home from '../pages/HomePage';
+import ContactPage from '../pages/ContactPage';
+import Notfound from '../pages/NotFound';
+import Sidecart from './Sidecart';
+import Footer from './Footer';
+import Sidebar from './Sidebar';
 
 class App extends Component {
 
   render() {
-
-    let isAuth = true; /* <---- pass in the user authentication token here */
-    let userName = "John Doe"; /* <--- we need to pass in the name of the user */
-
     return (
-      
       <div class="app">
-        <Header auth={isAuth} name={userName}/>
-
-        <Home auth={isAuth} name={userName}/>
-      </div> 
-      
+        <Header/>
+        <Sidebar/>
+        <Sidecart/>
+        <Switch>
+          <Route exact path="/" component={Home}/>
+          <Route path="/contact" component={ ContactPage }/> 
+          <Route component={ Notfound } />
+        </Switch>
+        <Footer/>
+      </div>
     );
   }
-
 }
 
 export default App;
